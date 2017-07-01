@@ -1,5 +1,5 @@
 # Q2A Ultimate Widgets [![Question2Answer](http://qa-themes.com/files/q2a-logo.png)](http://www.question2answer.org/) [![Question2Answer Themes](http://qa-themes.com/files/qa-logo.jpg)](http://qa-themes.com/ "Q2A Themes & Plugins")
-Widget Pack for Question2Answer(Question & Answer community platform) is **UNDER BETA** and not yet approved for public use. I'm currently adding widgets and necessary features to it.
+Widget Pack for Question2Answer(Question & Answer community platform) is **In BETA** and not yet approved for public use. I'm currently adding widgets and necessary features to it.
 
 ## Description
 [Q2A Ultimate Widgets](http://qa-themes.com/plugins/ultimate-widgets-plugin "Q2A Ultimate Widgets Plugin Guide")  is a free and open-source **Question2Answer Plugin** providing a number of usefull and new widgets for your Q&A site.
@@ -19,7 +19,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **UNDER
 - [ ] New Users
 
 ### Question List
-- [ ] Activity
+- [x] Activity
 - [x] Recent
 - [x] Hot 
 - [x] Most Answered
@@ -31,9 +31,9 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **UNDER
 - [ ] Category Posts: Questions from opened post's category
 
 ### Login
-- [ ] WordPress Login
-- [ ] WordPress SignUp
-- [ ] Q2A Login
+- [x] WordPress Login
+- [ ] WordPress SignUp(Tab with login form)
+- [x] Q2A Login
 - [ ] Q2A SignUp Tabs
 
 ### Other
