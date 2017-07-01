@@ -22,9 +22,9 @@ class rss_feed {
 		$gzip = (bool)get_widget_option($widget_name, 'uw_gzip');;
 		$get_thumbnails = (bool)get_widget_option($widget_name, 'uw_thumbnail');;
 
-		echo '<aside class="qa-feed-widget">';
+		echo '<aside class="uw-feed-widget">';
 		if($title)
-			echo '<H2 class="qa-feed-header" style="margin-top:0; padding-top:0;">'.$title.'</H2>';
+			echo '<H2 class="uw-feed-header">'.$title.'</H2>';
 
 		// read live content
 		$content = file_get_contents($url);
@@ -32,7 +32,7 @@ class rss_feed {
 			$content = $this->gzdecoder( $content );
 		// process feed chema
 		$x = new SimpleXmlElement($content);  
-		echo '<ul class="qa-feed-list">'; 
+		echo '<ul class="uw-feed-list">'; 
 		$i=0;
 		$rel = '';
 		if ($nofollow)
@@ -49,11 +49,11 @@ class rss_feed {
 				$media = $entry->children( $namespaces['media'] );
 				$thumbnail = $media->content->thumbnail->attributes()->url;
 				if(! empty($thumbnail))
-					$thumbnail = '<img class="qa-feed-thumbnail" src="' . $thumbnail . ($thumbnail_w > 0 ? '" width="' . $thumbnail_w . '"' : '') . ($thumbnail_h > 0 ? ' hight="' . $thumbnail_h . '"' : '') . '> ';
+					$thumbnail = '<img class="uw-feed-thumbnail" src="' . $thumbnail . ($thumbnail_w > 0 ? '" width="' . $thumbnail_w . '"' : '') . ($thumbnail_h > 0 ? ' hight="' . $thumbnail_h . '"' : '') . '> ';
 				else
 					$thumbnail = '';
 			}
-			echo "<li class=\"qa-feed-item\"><a href='$entry->link' $rel title='$entry->title'>" . $thumbnail . '<span class="qa-feed-link-title">' . $entry->title . "</span></a></li>";  
+			echo "<li class=\"uw-feed-item\"><a href='$entry->link' $rel title='$entry->title'>" . $thumbnail . '<span class="uw-feed-link-title">' . $entry->title . "</span></a></li>";  
 			$i++;
 			if ($i>=$count)
 				break;
