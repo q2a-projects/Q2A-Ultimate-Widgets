@@ -19,9 +19,9 @@ class wp_form_login {
 		$registration = (bool)get_widget_option($widget_name, 'uw_registration');;
 		$forgot = (bool)get_widget_option($widget_name, 'uw_forgot');;
 
-		echo '<aside class="uw-feed-widget">';
+		echo '<aside class="uw-wp-login-form-widget">';
 		if($title)
-			echo '<H2 class="uw-feed-header">'.$title.'</H2>';
+			echo '<H2 class="uw-wp-login-form-header">'.$title.'</H2>';
 		If( qa_is_logged_in() )
 			$themeobject->nav('user');
 		else{
@@ -35,28 +35,5 @@ class wp_form_login {
 
 			
 		echo '</aside>';
-	}
-
-	function gzdecoder($d){
-		$f=ord(substr($d,3,1));
-		$h=10;$e=0;
-		if($f&4){
-			$e=@unpack('v',substr($d,10,2));
-			$e=$e[1];$h+=2+$e;
-		}
-		if($f&8){
-			$h=@strpos($d,chr(0),$h)+1;
-		}
-		if($f&16){
-			$h=@strpos($d,chr(0),$h)+1;
-		}
-		if($f&2){
-			$h+=2;
-		}
-		$u = @gzinflate(@substr($d,$h));
-		if($u===FALSE){
-			$u=$d;
-		}
-		return $u;
 	}
 }
