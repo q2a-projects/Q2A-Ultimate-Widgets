@@ -41,6 +41,7 @@ $uw_widgets = array(
 	'most_viewed_posts' => 'Ultimate Widgets - Most Viewed Posts',
     'most_voted_posts' => 'Ultimate Widgets - Most Voted Posts',
 	'random_posts' => 'Ultimate Widgets - Random Posts',
+    'wp_form_login' => 'Ultimate Widgets - WordPress Login Form',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
