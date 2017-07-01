@@ -40,10 +40,10 @@ class most_voted_posts {
 			$questionlink = qa_path_html(qa_q_request($questionid, $question['title']),null, qa_opt('site_url'));
 			$q_time= qa_when_to_html($question['created'], 7);
 			$when=@$q_time['prefix'] . ' ' . @$q_time['data'] . ' ' . @$q_time['suffix'];
-			// get question content
-			$result=qa_db_query_sub('SELECT content FROM ^posts WHERE postid=#', $questionid);
-			$postinfo=qa_db_read_one_assoc($result, 'postid');
 			if ($thumbnail){
+				// get question content
+				$result=qa_db_query_sub('SELECT content FROM ^posts WHERE postid=#', $questionid);
+				$postinfo=qa_db_read_one_assoc($result, 'postid');
 				// get thumbnail
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
