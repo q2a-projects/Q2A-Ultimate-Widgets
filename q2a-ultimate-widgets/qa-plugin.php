@@ -38,7 +38,8 @@ $uw_widgets = array(
 	'hot_posts' => 'Ultimate Widgets - Hot Posts',
 	'most_answered_posts' => 'Ultimate Widgets - Most Answered Posts',
 	'most_viewed_posts' => 'Ultimate Widgets - Most Viewed Posts',
-	'most_voted_posts' => 'Ultimate Widgets - Most Voted Posts',
+    'most_voted_posts' => 'Ultimate Widgets - Most Voted Posts',
+	'random_posts' => 'Ultimate Widgets - Random Posts',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
