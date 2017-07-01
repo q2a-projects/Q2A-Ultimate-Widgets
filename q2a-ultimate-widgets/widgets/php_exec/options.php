@@ -12,7 +12,8 @@ $widget_options = array(
 	),
 	'uw_text' => array(
 		'label' => 'PHP Code(Field can contain raw text, HTML or PHP code):',
-		'type' => 'text',
+		'type' => 'textarea',
+		'rows' => '8',
 		'default-value' => qa_html('<?php echo "test is successfull!"; ?>'),
 		'tags' => 'NAME="uw_text"',
 	),
