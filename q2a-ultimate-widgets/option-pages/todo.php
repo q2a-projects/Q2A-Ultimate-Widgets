@@ -1,0 +1,1 @@
+Q2A Ultimate Widgets is a new plugin and will be updated with new features and brand new plugins.
