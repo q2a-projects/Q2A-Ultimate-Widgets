@@ -32,3 +32,28 @@ function get_widget_option_form($widget_name, $option_key){
 	}
 	return $fields;
 }
+
+
+function uw_get_base_url()
+{
+	/* First we need to get the protocol the website is using */
+	$protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"], 0, 5)) == 'https' ? 'https://' : 'http://';
+
+	/* returns /myproject/index.php */
+	if(QA_URL_FORMAT_NEAT == 0 || strpos($_SERVER['PHP_SELF'],'/index.php/') !== false):
+		$path = strstr($_SERVER['PHP_SELF'], '/index', true);
+		$directory = $path;
+	else:
+		$path = $_SERVER['PHP_SELF'];
+		$path_parts = pathinfo($path);
+		$directory = $path_parts['dirname'];
+		$directory = ($directory == "/") ? "" : $directory;
+	endif;       
+		
+		$directory = ($directory == "\\") ? "" : $directory;
+		
+	/* Returns localhost OR mysite.com */
+	$host = $_SERVER['HTTP_HOST'];
+
+	return $protocol . $host . $directory;
+}
