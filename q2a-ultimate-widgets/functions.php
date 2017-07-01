@@ -22,7 +22,7 @@ function get_widget_option_form($widget_name, $option_key){
 
 	foreach ($fields as $key => $field) {
 		if( isset($options[$key]) )
-			$fields[$key]['value'] = $options[$key];
+			$fields[$key]['value'] = qa_html($options[$key]);
 		else
 			if( isset($fields[$key]['default-value']) )
 				$fields[$key]['value'] = $fields[$key]['default-value'];
