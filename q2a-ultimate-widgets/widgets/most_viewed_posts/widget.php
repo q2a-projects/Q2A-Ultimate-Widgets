@@ -1,6 +1,6 @@
 <?php
 
-class hot_posts {
+class most_viewed_posts {
 	
 	function allow_template($template)
 	{
@@ -22,14 +22,14 @@ class hot_posts {
 
 
 		$userid=qa_get_logged_in_userid();
-		$questions = qa_db_select_with_pending(qa_db_qs_selectspec($userid, 'hotness', 0, '', null, false, false, $count));
+		$questions = qa_db_select_with_pending(qa_db_qs_selectspec($userid, 'views', 0, '', null, false, false, $count));
 
 
-		echo '<aside class="uw-hot-posts-widget">';
+		echo '<aside class="uw-most-viewed-posts-widget">';
 		if($title)
-			echo '<H2 class="uw-recent-header">'. $title .'</H2>';
+			echo '<H2 class="uw-most-viewed-posts-header">'. $title .'</H2>';
 
-		echo '<ul class="uw-hot-posts-list">';
+		echo '<ul class="uw-feed-list">';
 		
 		$i=0;
 		$thumb='';

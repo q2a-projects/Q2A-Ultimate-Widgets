@@ -36,6 +36,9 @@ $uw_widgets = array(
 	'rss_feed' => 'Ultimate Widgets - RSS Feed',
 	'recent_posts' => 'Ultimate Widgets - Recent Posts',
 	'hot_posts' => 'Ultimate Widgets - Hot Posts',
+	'most_answered_posts' => 'Ultimate Widgets - Most Answered Posts',
+	'most_viewed_posts' => 'Ultimate Widgets - Most Viewed Posts',
+	'most_voted_posts' => 'Ultimate Widgets - Most Voted Posts',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);

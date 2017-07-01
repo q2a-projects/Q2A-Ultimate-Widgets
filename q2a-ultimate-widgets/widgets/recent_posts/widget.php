@@ -25,13 +25,14 @@ class recent_posts {
 		$questions = qa_db_select_with_pending(qa_db_qs_selectspec($userid, 'created', 0, '', null, false, false, $count));
 
 
-		echo '<aside class="uw-feed-widget">';
+		echo '<aside class="uw-recent-posts-widget">';
 		if($title)
 			echo '<H2 class="uw-recent-header">'. $title .'</H2>';
 
-		echo '<ul class="uw-feed-list">';
+		echo '<ul class="uw-recent-posts-list">';
 		
 		$i=0;
+		$thumb='';
 		foreach ($questions as $question)
 		{
 			$i++;
