@@ -20,10 +20,12 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **UNDER
 
 ### Question List
 - [ ] Activity
-- [ ] Recent
-- [ ] Recent Events
-- [ ] Hot 
-- [ ] Random Post
+- [x] Recent
+- [x] Hot 
+- [x] Most Answered
+- [x] Most Viewed
+- [x] Most Voted
+- [x] Random Post
 - [ ] Tab: combine other list in tabs
 - [ ] Post Carousel 
 - [ ] Category Posts: Questions from opened post's category
