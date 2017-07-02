@@ -45,6 +45,7 @@ $uw_widgets = array(
     'form_login' => 'Ultimate Widgets - Q2A Login Form',
     'trending_topics' => 'Ultimate Widgets - Trending Topics(Tags)',
     'php_exec' => 'Ultimate Widgets - PHP Code Runner',
+    'accessibility' => 'Ultimate Widgets - Accessibility',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
