@@ -27,7 +27,7 @@ class hot_posts {
 
 		echo '<aside class="uw-hot-posts-widget">';
 		if($title)
-			echo '<H2 class="uw-recent-header">'. $title .'</H2>';
+			echo '<H2 class="uw-hot-posts-header">'. $title .'</H2>';
 
 		echo '<ul class="uw-hot-posts-list">';
 		
@@ -54,11 +54,11 @@ class hot_posts {
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<div class="uw-hot-posts-thumb"><a class="uw-hot-posts-link-thumbnail" href="' . $questionlink . '"><img class="uw-hot-posts-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
 			}
 			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-link-body"><a class="uw-recent-link" href="' . $questionlink . '"><h4 class="uw-recent-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-time">' . $when . '</span></a></div></li>';
+			echo '<div class="uw-hot-posts-link-body"><a class="uw-hot-posts-link" href="' . $questionlink . '"><h4 class="uw-hot-posts-link-header">' . $question['title'] . '</h4>';
+			echo '<span class="uw-hot-posts-time">' . $when . '</span></a></div></li>';
 		}		
 		echo '</ul></aside>';
 
