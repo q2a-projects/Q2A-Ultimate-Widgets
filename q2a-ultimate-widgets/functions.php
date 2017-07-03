@@ -10,14 +10,16 @@ function get_widget_option($option_key, $option){
 	$options = get_widget_options($option_key);
 	return @$options[$option];
 }
-function get_widget_option_fields($widget_name){
+function get_widget_option_fields($widget_name, $option_key){
 	// get $widget_options from file
 	include UW_DIR.'/widgets/'.$widget_name.'/options.php'; // get local variable for options from widget module
+	if( function_exists($widget_name) )
+		$widget_options = $widget_name($widget_options, $option_key);
 	return $widget_options;
 }
 
 function get_widget_option_form($widget_name, $option_key){
-	$fields = get_widget_option_fields($widget_name);
+	$fields = get_widget_option_fields($widget_name, $option_key);
 	$options = get_widget_options($option_key);
 
 	foreach ($fields as $key => $field) {

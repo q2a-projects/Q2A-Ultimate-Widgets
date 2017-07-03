@@ -45,13 +45,15 @@ class qa_html_theme_layer extends qa_html_theme_base {
 				$this->content['form']['fields'] = $this->content['form']['fields'] + $widget_options;
 			}
 		}
-
-
-
-		//v($this->content['form']);
-		//v($this->template);
-		//v($this->request);
-
 	}
+
+	function head_script()
+	{
+		qa_html_theme_base::head_script();
+		$variables = '';
+		$variables .= 'uw_ajax_url = "' . UW_URL . 'ajax.php";';
+		$this->output('<script>' . $variables . '</script>');
+	}	
+
 }
 

@@ -21,7 +21,7 @@ require_once "functions.php";
 
 
 define('UW_DIR', dirname( __FILE__ ));
-define('UW_URL', uw_get_base_url().'/qa-plugin/q2a-ultimate-widgets');
+define('UW_URL', uw_get_base_url().'/qa-plugin/q2a-ultimate-widgets/');
 define('UW_VERSION', 1);
 
 
@@ -46,6 +46,7 @@ $uw_widgets = array(
     'trending_topics' => 'Ultimate Widgets - Trending Topics(Tags)',
     'php_exec' => 'Ultimate Widgets - PHP Code Runner',
     'accessibility' => 'Ultimate Widgets - Accessibility',
+    'mailchimp' => 'Ultimate Widgets - MailChimp Subscription',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);

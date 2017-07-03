@@ -41,9 +41,9 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Q2A Stats
 - [x] RSS Feed
 - [x] Trending Topics
-- [ ] PHP Code Widget
-- [ ] Accessibility Widget(Buttons for live font size change and night mode)
-- [ ] MailChimp Widget
+- [x] PHP Code Widget
+- [x] Accessibility Widget(Buttons for live font size change and night mode)
+- [x] MailChimp Widget
 
 ### Static Content
 - [ ] Text & HTML

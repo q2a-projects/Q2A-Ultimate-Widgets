@@ -1,6 +1,16 @@
 <?php
 
 return array(
+	'first_name' => 'Your Name',
+	'last_name' => 'Last Name',
+	'email' => 'E-Mail Address',
+	'subscribe' => 'Subscribe',
+	'invalid' => 'Invalid Email Address!',
+	'subscribing' => 'Subscribing you now...',
+	'subscribe_success' => 'Thanks for subscribing!',
+	'subscribe_fail' => 'Mail Subscribtion was unsuccessful!',
+
+	'an' => 'A-',
 	'an' => 'A-',
 	'ap' => 'A+',
 	'reset' => 'Reset',
