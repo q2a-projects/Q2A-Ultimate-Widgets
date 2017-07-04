@@ -10,6 +10,8 @@ return array(
 	'subscribe_success' => 'Thanks for subscribing!',
 	'subscribe_fail' => 'Mail Subscribtion was unsuccessful!',
 
+	'search' => 'Search',
+
 	'an' => 'A-',
 	'an' => 'A-',
 	'ap' => 'A+',

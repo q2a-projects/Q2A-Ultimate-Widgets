@@ -47,6 +47,7 @@ $uw_widgets = array(
     'php_exec' => 'Ultimate Widgets - PHP Code Runner',
     'accessibility' => 'Ultimate Widgets - Accessibility',
     'mailchimp' => 'Ultimate Widgets - MailChimp Subscription',
+    'google_search' => 'Ultimate Widgets - Google Search',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
