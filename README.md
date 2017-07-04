@@ -17,6 +17,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Month's Top Users
 - [ ] All Time Top Users
 - [ ] New Users
+- [ ] Top users in each category in the week / month
 
 ### Question List
 - [x] Activity
@@ -26,9 +27,12 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Most Viewed
 - [x] Most Voted
 - [x] Random Post
+- [ ] Posts from people I follow
 - [ ] Tab: combine other list in tabs
 - [ ] Post Carousel 
 - [ ] Category Posts: Questions from opened post's category
+- [ ] Posts from specific category
+- [ ] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
 
 ### Login
 - [x] WordPress Login
@@ -38,7 +42,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 ### Other
 - [ ] Ask form
-- [ ] Q2A Stats
+- [x] Q2A Stats
 - [x] RSS Feed
 - [x] Trending Topics
 - [x] PHP Code Widget
@@ -61,6 +65,13 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Styling
 - [x] Individual Widget Options
 - [ ] Conditional Widgets
+
+### Filters(Conditional Widgets)
+- [ ] Visitors/Users
+- [ ] Moderators,Admins/Users
+- [ ] Mobile/Desktop
+- [ ] Friends and Followers in profile page 
+- [ ] User Points 
 
 ### Do Later(Lowwer Priority):
 - [ ] Social: Twitter, Google+, FaceBook
