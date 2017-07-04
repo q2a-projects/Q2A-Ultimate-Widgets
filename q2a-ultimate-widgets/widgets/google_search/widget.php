@@ -19,9 +19,9 @@ class google_search {
 		$palceholder = get_widget_option($widget_name, 'uw_palceholder');;
 		$button = (bool)get_widget_option($widget_name, 'button');;
 
-		echo '<aside class="uw-wp-login-form-widget">';
+		echo '<aside class="uw-google-search-widget">';
 		if($title)
-			echo '<H2 class="uw-wp-login-form-header">'.$title.'</H2>';
+			echo '<H2 class="uw-google-search-header">'.$title.'</H2>';
 
 		echo '<form action="http://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">';
 		echo '<input name="sitesearch" type="hidden" value="' . qa_opt('site_url') . '">';
