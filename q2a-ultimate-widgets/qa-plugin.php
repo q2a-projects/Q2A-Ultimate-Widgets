@@ -49,6 +49,8 @@ $uw_widgets = array(
     'mailchimp' => 'Ultimate Widgets - MailChimp Subscription',
     'google_search' => 'Ultimate Widgets - Google Search',
     'stat_chart' => 'Ultimate Widgets - Post Activity Stat Charts',
+    'static_text' => 'Ultimate Widgets - Static Text',
+    'static_image' => 'Ultimate Widgets - Static Image',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
