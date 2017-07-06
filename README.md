@@ -8,7 +8,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 1. [Download Plugin](https://github.com/q2a-projects/Q2A-Ultimate-Widgets/archive/master.zip "Download Zip File") and extract "q2a-ultimate-widgets" directory.
 2. upload it to your Q2A site's plugin directory (e.g. `qa-plugin/q2a-ultimate-widgets`).
-3. In Q2A log in as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
+3. In Q2A, login as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
 
 ## To Do
 ### Users Widgets
@@ -55,7 +55,8 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Image Slider
 - [x] Image(optional link)
 - [x] Button for Modal Pop Up
-- [ ] Video(Youtube, Vimeo, ...)
+- [x] Video(Youtube, Vimeo)
+- [x] Soundcloud Widget
 - [ ] Alert widgets
 - [ ] Social Media Links
 - [ ] Random Content: Randomly open one of the added content from list of texts
@@ -80,7 +81,6 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Google Analytics Dashboard
 - [ ] Github
 - [ ] Flickr Stream
-- [ ] Soundcloud Widget
 - [ ] Patreon Button & Widgets
 
 ## Author

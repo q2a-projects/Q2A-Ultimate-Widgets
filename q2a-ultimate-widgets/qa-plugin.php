@@ -54,6 +54,7 @@ $uw_widgets = array(
     'modal' => 'Ultimate Widgets - Modal Window',
     'youtube' => 'Ultimate Widgets - Embed Youtube',
     'vimeo' => 'Ultimate Widgets - Embed Vimeo',
+    'soundcloud' => 'Ultimate Widgets - Embed SoundCloud',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
