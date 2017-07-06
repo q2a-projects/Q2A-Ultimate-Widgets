@@ -27,7 +27,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Most Viewed
 - [x] Most Voted
 - [x] Random Post
-- [ ] Posts from people I follow
+- [x] Questions from people I follow
 - [ ] Tab: combine other list in tabs
 - [ ] Post Carousel 
 - [ ] Category Posts: Questions from opened post's category

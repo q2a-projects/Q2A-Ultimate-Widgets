@@ -55,6 +55,7 @@ $uw_widgets = array(
     'youtube' => 'Ultimate Widgets - Embed Youtube',
     'vimeo' => 'Ultimate Widgets - Embed Vimeo',
     'soundcloud' => 'Ultimate Widgets - Embed SoundCloud',
+    'favorited_user_questions' => 'Ultimate Widgets - Favorited Users Questions',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
