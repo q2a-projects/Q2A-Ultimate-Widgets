@@ -51,6 +51,9 @@ $uw_widgets = array(
     'stat_chart' => 'Ultimate Widgets - Post Activity Stat Charts',
     'static_text' => 'Ultimate Widgets - Static Text',
     'static_image' => 'Ultimate Widgets - Static Image',
+    'modal' => 'Ultimate Widgets - Modal Window',
+    'youtube' => 'Ultimate Widgets - Embed Youtube',
+    'vimeo' => 'Ultimate Widgets - Embed Vimeo',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);

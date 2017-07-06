@@ -42,7 +42,8 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 ### Other
 - [ ] Ask form
-- [x] Q2A Stats
+- [ ] Q2A Stats(General Site Stat)
+- [x] Q2A Stats(Post Activity)
 - [x] RSS Feed
 - [x] Trending Topics
 - [x] PHP Code Widget
@@ -50,11 +51,10 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] MailChimp Widget
 
 ### Static Content
-- [ ] Text & HTML
+- [x] Text & HTML
 - [ ] Image Slider
-- [ ] Image(optional link)
-- [ ] Button(call to action or link)
-- [ ] Modal Pop Up
+- [x] Image(optional link)
+- [x] Button for Modal Pop Up
 - [ ] Video(Youtube, Vimeo, ...)
 - [ ] Alert widgets
 - [ ] Social Media Links
