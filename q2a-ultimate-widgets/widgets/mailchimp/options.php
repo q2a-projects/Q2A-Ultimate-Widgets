@@ -55,10 +55,8 @@ $widget_options = array(
 );
 
 function mailchimp($widget_options, $option_key){
-	global $uw_widgets;
-	$widget_title = 'Ultimate Widgets - MailChimp Subscription';
-	$api = get_widget_option($option_key, 'uw_api');;
-	$subscription_list = get_widget_option($option_key, 'uw_list');;
+	$api = get_widget_option($option_key, 'uw_api');
+	$subscription_list = get_widget_option($option_key, 'uw_list');
 
 	require_once UW_DIR.'widgets/mailchimp/MailChimp.php';
 	$MailChimp = new MailChimpAPI( $api );
