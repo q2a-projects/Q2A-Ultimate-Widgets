@@ -55,5 +55,28 @@ class qa_html_theme_layer extends qa_html_theme_base {
 		$this->output('<script>' . $variables . '</script>');
 	}	
 
+	// load individual widget stylings
+	function head_css()
+	{
+		qa_html_theme_base::head_css();
+		$style_files = array();
+		foreach ($this->content['widgets'] as $region_key => $regions) {
+			foreach ($regions as $template_key => $widgets) {
+				$position =  strtoupper(substr($region_key,0,1) . substr($template_key,0,1) );
+				foreach ($widgets as $key => $widget) {
+					$widget_name = get_class ($widget);
+					$widget_key = $widget_name.'_'.$position;
+					$file = get_widget_option($widget_key, 'uw_styles');
+					// if file existed then put it into an array to prevent duplications
+					if($file)
+						$styles[$widget_name][$file]=true;
+				}
+			}
+		}
+		foreach ($styles as $widget_name => $files)
+			foreach ($files as $file => $verified)
+				$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
+	}	
+
 }
 

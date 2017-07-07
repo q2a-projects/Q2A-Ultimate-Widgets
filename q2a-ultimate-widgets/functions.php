@@ -21,7 +21,24 @@ function get_widget_option_fields($widget_name, $option_key){
 function get_widget_option_form($widget_name, $option_key){
 	$fields = get_widget_option_fields($widget_name, $option_key);
 	$options = get_widget_options($option_key);
-
+	// if there are css files in this widget add them to options
+	$styles_path = UW_DIR.'/widgets/'.$widget_name.'/styles/';
+	if(file_exists($styles_path)){
+		$fields = array('uw_styles' => array(
+					'label' => 'Active CSS Style for widget:',
+					'options' => array('none' => 'No Styling'),
+					'type' => 'select',
+					'default-value' => 'none',
+					'tags' => 'NAME="uw_styles"',
+					'match_by' => 'key',
+				)) + $fields;
+		foreach(glob($styles_path .'*.css') as $file)
+			$fields['uw_styles']['options'] += array(basename($file) => substr(basename($file), 0, -4)); // remove .css from file name
+		$active_style = get_widget_option($option_key, 'uw_styles');
+		//if( !$active_style or $active_style='' or $active_style=='none' )
+		//	$fields['uw_styles']['options']['value'] = 'none';
+	}
+	// set default values
 	foreach ($fields as $key => $field) {
 		if( isset($options[$key]) )
 			$fields[$key]['value'] = qa_html($options[$key]);
@@ -30,8 +47,8 @@ function get_widget_option_form($widget_name, $option_key){
 				$fields[$key]['value'] = $fields[$key]['default-value'];
 			else
 				$fields[$key]['value'] = '';
-
 	}
+
 	return $fields;
 }
 
