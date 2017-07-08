@@ -1,10 +1,6 @@
 <?php
 
 $widget_options = array(
-	'hr1' => array(
-		'label' => '<hr>',
-		'type' => 'static',
-	),
 	'uw_title' => array(
 		'label' => 'Widget Title',
 		'default-value' => 'Most Answered Questions',

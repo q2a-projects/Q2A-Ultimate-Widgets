@@ -21,9 +21,16 @@ function get_widget_option_fields($widget_name, $option_key){
 function get_widget_option_form($widget_name, $option_key){
 	$fields = get_widget_option_fields($widget_name, $option_key);
 	$options = get_widget_options($option_key);
+	// add a header to all plugin options to let admins know that it's a Plugin Specific section
+	if( count($fields)>0 )
+		$fields = array('__uw_options_header' => array(
+					'label' => '<hr><h3>Widget Options <small>for Ultimate Widgets plugin</small></h3>',
+					'type' => 'static',
+				)) + $fields;
 	// if there are css files in this widget add them to options
 	$styles_path = UW_DIR.'/widgets/'.$widget_name.'/styles/';
 	if(file_exists($styles_path)){
+		// Select list for choosing a css file
 		$fields = array('uw_styles' => array(
 					'label' => 'Active CSS Style for widget:',
 					'options' => array('none' => 'No Styling'),
@@ -31,7 +38,14 @@ function get_widget_option_form($widget_name, $option_key){
 					'default-value' => 'none',
 					'tags' => 'NAME="uw_styles"',
 					'match_by' => 'key',
+					'note' => 'this options are from CSS files in your widget\'s "styles" directory. you can add your own styling file to it and choose it from this options.',
 				)) + $fields;
+		// a header to attract attention to styling options
+		$fields = array('__uw_styling_header' => array(
+					'label' => '<hr><h3>Styling Options</h3>',
+					'type' => 'static',
+				)) + $fields;
+
 		foreach(glob($styles_path .'*.css') as $file)
 			$fields['uw_styles']['options'] += array(basename($file) => substr(basename($file), 0, -4)); // remove .css from file name
 		$active_style = get_widget_option($option_key, 'uw_styles');
