@@ -35,13 +35,12 @@ class qa_html_theme_layer extends qa_html_theme_base {
 				$position = substr(@$position,0,2);
 			}
 			$widget_name = array_search($widget_title, $uw_widgets);
-			$widget_key = $widget_name . '_' . $position;
-
+			// if it's one of this plugin's widgets
 			if($widget_name){
+				$widget_key = $widget_name . '_' . $position;
 				// get $widget_options from file
-				//include UW_DIR.'/widgets/'.$widget_key.'/options.php'; // get local variable for options from widget module
-				// merge widget's system options with our widget's specific options
 				$widget_options = get_widget_option_form($widget_name, $widget_key);
+				// merge widget's system options with our widget's specific options
 				$this->content['form']['fields'] = $this->content['form']['fields'] + $widget_options;
 			}
 		}
