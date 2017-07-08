@@ -1,0 +1,29 @@
+.uw-most-voted-posts-widget {
+    padding: 5px;
+}
+.uw-most-voted-posts-widget h2 {
+    padding: 5px !important;
+}
+.uw-most-voted-posts-list {
+	list-style: outside none none;
+	padding: 0 20px;
+}
+.uw-most-voted-posts-thumbnail {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.uw-most-voted-posts-link{
+	width: 100%;
+}
+.uw-most-voted-posts-time {
+    float: right;
+    font-size: 14px;
+    font-style: italic;
+}
+.uw-most-voted-posts-link-body {
+    border-bottom: 1px solid #ddd;
+    margin: 5px 0;
+}
+.uw-most-voted-posts-link-body:last-child {
+    border-bottom: none;
+}

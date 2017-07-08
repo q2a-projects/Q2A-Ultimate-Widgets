@@ -29,7 +29,7 @@ class most_viewed_posts {
 		if($title)
 			echo '<H2 class="uw-most-viewed-posts-header">'. $title .'</H2>';
 
-		echo '<ul class="uw-feed-list">';
+		echo '<ul class="uw-most-viewed-posts-list">';
 		
 		$i=0;
 		$thumb='';
@@ -54,11 +54,12 @@ class most_viewed_posts {
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-most-viewed-posts-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-link-body"><a class="uw-recent-link" href="' . $questionlink . '"><h4 class="uw-recent-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-most-viewed-posts-link-body">';
+			echo '<a class="uw-most-viewed-posts-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-most-viewed-posts-title">'. $question['title'] . '</span>';
+			echo '<span class="uw-most-viewed-posts-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
 

@@ -33,11 +33,11 @@ class favorited_user_questions {
 
 		$questions = qa_db_select_with_pending($selectspec);
 
-		echo '<aside class="uw-recent-activity-widget">';
+		echo '<aside class="uw-favorite-user-questions-widget">';
 		if($title)
-			echo '<H2 class="uw-recent-activity-header">'. $title .'</H2>';
+			echo '<H2 class="uw-favorite-user-questions-header">'. $title .'</H2>';
 
-		echo '<ul class="uw-recent-activity-list">';
+		echo '<ul class="uw-favorite-user-questions-list">';
 		
 		$i=0;
 		$thumb='';
@@ -62,11 +62,12 @@ class favorited_user_questions {
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-activity-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-activity-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-favorite-user-questions-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-activity-link-body"><a class="uw-recent-activity-link" href="' . $questionlink . '"><h4 class="uw-recent-activity-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-favorite-user-questions-link-body">';
+			echo '<a class="uw-favorite-user-questions-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-favorite-user-questions-title">'. $question['title'] . '</span>';
+			echo '<span class="uw-favorite-user-questions-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
 

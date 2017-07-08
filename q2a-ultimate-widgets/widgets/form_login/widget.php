@@ -26,7 +26,7 @@ class form_login {
 
 		echo '<aside class="uw-login-form-widget">';
 		if($title)
-			echo '<H2 class="uw-feed-header">'.$title.'</H2>';
+			echo '<H2 class="uw-login-form-header">'.$title.'</H2>';
 
 		if (qa_is_logged_in()) {
 			$themeobject->nav('user');
@@ -37,21 +37,19 @@ class form_login {
 
 			// login form
 			$login=@$qa_content['navigation']['user']['login'];
-			echo '<!--[Begin: login form]-->',				
-				'<form id="qa-loginform" action="'.$userlinks['login'].'" method="post">',
-					'<input type="text" id="qa-userid" name="emailhandle" placeholder="'.trim(qa_lang_html('users/email_handle_label'), ':').'" />',
-					'<input type="password" id="qa-password" name="password" placeholder="'.trim(qa_lang_html('users/password_label'), ':').'" />',
-					'<input class="qa-form-tall-button qa-form-tall-button-login" value="Log In" name="dologin" type="submit">',
-					$forgot?'<a class="btn qa-forget" href="'. $forgotpath .'">'. qa_lang_html('users/forgot_link') .'</a>':'',
-					'<div id="qa-rememberbox"><input type="checkbox" name="rememberme" id="qa-rememberme" />',
-					'<label for="rememberme" id="qa-remember">'.qa_lang_html('users/remember').'</label></div>',
+			echo '<form action="'.$userlinks['login'].'" method="post">',
+					'<input type="text" class="uw-login-form-userid" name="emailhandle" placeholder="'.trim(qa_lang_html('users/email_handle_label'), ':').'" />',
+					'<input type="password" class="uw-login-form-password" name="password" placeholder="'.trim(qa_lang_html('users/password_label'), ':').'" />',
+					'<input class="uw-login-form-login" value="' . qa_lang_html('users/login_button') . '" name="dologin" type="submit">',
+					'<div class="uw-login-form-rememberbox"><input type="checkbox" name="rememberme" id="rememberme" class="uw-login-form-rememberme" />',
+					'<label for="rememberme" class="uw-login-form-remember">'.qa_lang_html('users/remember').'</label></div>',
+					$forgot?'<a class="uw-login-form-forget" href="'. $forgotpath .'">'. qa_lang_html('users/forgot_link') .'</a>':'',
 					'<input type="hidden" name="code" value="'.qa_html(qa_get_form_security_code('login')).'"/>',
-				'</form>',
-				'<!--[End: login form]-->';
+				'</form>';
 			if($social)
 				$this->social_login($nav);
 			if($registration)
-				echo '<a class="btn qa-register" href="'. $register['url'] .'">'. $register['label'] .'</a>';
+				echo '<a class="uw-login-form-register" href="'. $register['url'] .'">'. $register['label'] .'</a>';
 		}
 
 		echo '</aside>';

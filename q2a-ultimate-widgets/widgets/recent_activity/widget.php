@@ -60,11 +60,12 @@ class recent_activity {
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-activity-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-activity-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-recent-activity-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-activity-link-body"><a class="uw-recent-activity-link" href="' . $questionlink . '"><h4 class="uw-recent-activity-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-recent-activity-link-body">';
+			echo '<a class="uw-recent-activity-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-recent-activity-title">'. $question['title'] . '</span>';
+			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
 

@@ -1,0 +1,18 @@
+.uw-google-search-widget {
+    padding: 5px;
+}
+.uw-google-search-widget h2 {
+    padding: 5px !important;
+}
+.uw-google-search-button{
+    background: #0179b5 none repeat scroll 0 0;
+    border: 1px solid #004566;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    padding: 5px 10px;
+}

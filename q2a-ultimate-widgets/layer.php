@@ -59,7 +59,8 @@ class qa_html_theme_layer extends qa_html_theme_base {
 	function head_css()
 	{
 		qa_html_theme_base::head_css();
-		$style_files = array();
+		// if if already added widgets have a css file activated
+		$styles = array();
 		foreach ($this->content['widgets'] as $region_key => $regions) {
 			foreach ($regions as $template_key => $widgets) {
 				$position =  strtoupper(substr($region_key,0,1) . substr($template_key,0,1) );
@@ -73,9 +74,11 @@ class qa_html_theme_layer extends qa_html_theme_base {
 				}
 			}
 		}
-		foreach ($styles as $widget_name => $files)
-			foreach ($files as $file => $verified)
-				$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
+		// add styling files to theme
+		if($styles)
+			foreach ($styles as $widget_name => $files)
+				foreach ($files as $file => $verified)
+					$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
 	}	
 
 }

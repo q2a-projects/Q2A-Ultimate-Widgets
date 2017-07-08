@@ -54,11 +54,12 @@ class hot_posts {
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-hot-posts-thumb"><a class="uw-hot-posts-link-thumbnail" href="' . $questionlink . '"><img class="uw-hot-posts-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-hot-posts-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-hot-posts-link-body"><a class="uw-hot-posts-link" href="' . $questionlink . '"><h4 class="uw-hot-posts-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-hot-posts-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-hot-posts-link-body">';
+			echo '<a class="uw-hot-posts-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-hot-posts-title">'. $question['title'] . '</span>';
+			echo '<span class="uw-hot-posts-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
 

@@ -1,0 +1,24 @@
+.uw-feed-widget {
+    padding: 5px;
+}
+.uw-feed-widget h2 {
+    padding: 5px !important;
+}
+.uw-feed-list {
+	list-style: outside none none;
+	padding: 0 20px;
+}
+.uw-feed-thumbnail {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.uw-feed-link{
+	width: 100%;
+}
+.uw-feed-link-body {
+    border-bottom: 1px solid #ddd;
+    margin: 5px 0;
+}
+.uw-feed-link-body:last-child {
+    border-bottom: none;
+}

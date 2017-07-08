@@ -56,21 +56,22 @@ $widget_options = array(
 
 function mailchimp($widget_options, $option_key){
 	$api = get_widget_option($option_key, 'uw_api');
-	$subscription_list = get_widget_option($option_key, 'uw_list');
+	if($api){
+		require_once UW_DIR.'/widgets/mailchimp/MailChimp.php';
+		$subscription_list = get_widget_option($option_key, 'uw_list');
 
-	require_once UW_DIR.'widgets/mailchimp/MailChimp.php';
-	$MailChimp = new MailChimpAPI( $api );
-	$lists =  $MailChimp->get('/lists/');
-	if(count($lists)<=0)
-		$widget_options['0'] = 'Either API Key is not saved or isn\'t right, or no Lists are created in your mailchimp account!';
-	else{
-		$options=array();
-		foreach ($lists['lists'] as $key => $list) {
-			$options[ $list['id'] ] = $list['name'];
+		$MailChimp = new MailChimpAPI( $api );
+		$lists =  $MailChimp->get('/lists/');
+		if(count($lists)<=0)
+			$widget_options['0'] = 'Either API Key is not saved or isn\'t right, or no Lists are created in your mailchimp account!';
+		else{
+			$options=array();
+			foreach ($lists['lists'] as $key => $list) {
+				$options[ $list['id'] ] = $list['name'];
+			}
 		}
+		$widget_options['uw_list']['options'] = $options;
+		$widget_options['uw_list']['value'] = $subscription_list;
 	}
-	$widget_options['uw_list']['options'] = $options;
-	$widget_options['uw_list']['value'] = $subscription_list;
-
 	return $widget_options;
 }

@@ -1,0 +1,21 @@
+.uw-favorite-user-questions-list {
+	list-style: outside none none;
+	padding: 0;
+}
+.uw-favorite-user-questions-thumbnail {
+	margin: 0 5px 0 0;
+}
+.uw-favorite-user-questions-link{
+	display: inline-block;
+}
+.uw-favorite-user-questions-time {
+    float: right;
+    font-size: 14px;
+    font-style: italic;
+}
+.uw-favorite-user-questions-link-body {
+    border-bottom: 1px solid #ddd;
+}
+.uw-favorite-user-questions-link-body:last-child {
+    border-bottom: none;
+}

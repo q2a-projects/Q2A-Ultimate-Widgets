@@ -1,0 +1,9 @@
+.uw-accessibility-widget {
+	padding: 10px;
+}
+.uw-accessibility-smaller, .uw-accessibility-larger {
+	width: 50%;
+}
+.uw-accessibility-reset, .uw-accessibility-night-mode{
+	width: 100%;
+}

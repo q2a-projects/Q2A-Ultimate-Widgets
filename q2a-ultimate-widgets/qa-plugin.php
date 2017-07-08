@@ -35,7 +35,7 @@ global $uw_widgets;
 $uw_widgets = array(
 	'rss_feed' => 'Ultimate Widgets - RSS Feed',
     'recent_activity' => 'Ultimate Widgets - Recent Activity',
-	'recent_posts' => 'Ultimate Widgets - Recent Posts',
+	'recent_posts' => 'Ultimate Widgets - Recent Questions',
 	'hot_posts' => 'Ultimate Widgets - Hot Posts',
 	'most_answered_posts' => 'Ultimate Widgets - Most Answered Posts',
 	'most_viewed_posts' => 'Ultimate Widgets - Most Viewed Posts',

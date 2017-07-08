@@ -1,0 +1,43 @@
+.uw-login-form-widget .qa-nav-user {
+	float: none;
+	margin: 0;
+	white-space: initial;
+}
+.uw-login-form-widget .qa-logged-in-avatar {
+	width: auto;
+}
+.uw-login-form-widget .qa-nav-user-list {
+	display: block;
+	margin: 0 5px 0 0;
+}
+.uw-login-form-widget .qa-nav-user-item.qa-nav-user-updates {
+	border: medium none;
+}
+.uw-login-form-widget {
+    padding: 5px;
+}
+.uw-login-form-widget h2 {
+    padding: 5px !important;
+}
+.uw-login-form-userid, .uw-login-form-password {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.uw-login-form-login{
+	background: #0179b5;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	border: 1px solid #004566;
+	padding: 5px 10px;
+	line-height: 14px;
+	cursor: pointer;
+	box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
+	border-radius: 3px;
+}
+
+.uw-login-form-rememberbox {
+    float: right;
+    margin: 0 5px 0 0;
+}

@@ -42,6 +42,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 ### Other
 - [ ] Ask form
+- [ ] Search form
 - [ ] Q2A Stats(General Site Stat)
 - [x] Q2A Stats(Post Activity)
 - [x] RSS Feed
@@ -63,7 +64,8 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 ### Features:
 - [ ] Cache
-- [ ] Styling
+- [x] Styling
+- [ ] Merge widget's css files into a single file and use it instead of seperate files
 - [x] Individual Widget Options
 - [ ] Conditional Widgets
 

@@ -25,9 +25,9 @@ class google_search {
 
 		echo '<form action="http://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">';
 		echo '<input name="sitesearch" type="hidden" value="' . qa_opt('site_url') . '">';
-		echo '<input autocomplete="on" class="form-controls search" name="q" placeholder="' . $palceholder . '" required="required"  type="text">';
+		echo '<input autocomplete="on" class="uw-google-search-input" name="q" placeholder="' . $palceholder . '" required="required"  type="text">';
 		if($title)
-			echo '<button class="button" type="submit">' . qa_lang_html('uw/search') . '</button>';
+			echo '<button class="uw-google-search-button" type="submit">' . qa_lang_html('uw/search') . '</button>';
 		echo '</form>';
 
 			
