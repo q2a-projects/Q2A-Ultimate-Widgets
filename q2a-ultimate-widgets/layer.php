@@ -4,7 +4,7 @@ class qa_html_theme_layer extends qa_html_theme_base {
 	function doctype(){
 		qa_html_theme_base::doctype();
 		// Administrator panel navigation item
-		if ($this->request == 'admin/ulitmate_widgets') {
+		if ($this->request == 'admin/ultimate_widgets') {
 			if(empty($this->content['navigation']['sub']))
 				$this->content['navigation']['sub']=array();
 			require_once QA_INCLUDE_DIR.'qa-app-admin.php';
@@ -14,13 +14,13 @@ class qa_html_theme_layer extends qa_html_theme_base {
 				$this->content['navigation']['sub']
 			);
 		}
-		if ( ($this->template=='admin') or ($this->request == 'ulitmate_widgets') ){
-			$this->content['navigation']['sub']['ulitmate_widgets'] = array(
+		if ( ($this->template=='admin') or ($this->request == 'ultimate_widgets') ){
+			$this->content['navigation']['sub']['ultimate_widgets'] = array(
 				'label' => 'Ultimate Widgets',
-				'url' => qa_path_html('admin/ulitmate_widgets'),
+				'url' => qa_path_html('admin/ultimate_widgets'),
 			);
-			if ($this->request == 'admin/ulitmate_widgets'){
-				$this->content['navigation']['sub']['ulitmate_widgets']['selected'] = true;
+			if ($this->request == 'admin/ultimate_widgets'){
+				$this->content['navigation']['sub']['ultimate_widgets']['selected'] = true;
 			}
 		}
 

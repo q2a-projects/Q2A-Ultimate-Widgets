@@ -15,7 +15,7 @@ class uw_options {
 	}
 
 	function match_request($request){
-		if ($request=='admin/ulitmate_widgets')
+		if ($request=='admin/ultimate_widgets')
 			return true;
 		return false;
 	}
