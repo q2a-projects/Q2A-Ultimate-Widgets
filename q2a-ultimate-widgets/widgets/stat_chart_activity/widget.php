@@ -1,6 +1,6 @@
 <?php
 
-class stat_chart {
+class stat_chart_activity {
 	
 	function allow_template($template)
 	{
