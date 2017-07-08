@@ -41,8 +41,8 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Q2A SignUp Tabs
 
 ### Other
-- [ ] Ask form
-- [ ] Search form
+- [x] Ask form
+- [x] Search form
 - [ ] Q2A Stats(General Site Stat)
 - [x] Q2A Stats(Post Activity)
 - [x] RSS Feed

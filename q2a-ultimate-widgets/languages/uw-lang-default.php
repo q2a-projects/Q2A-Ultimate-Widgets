@@ -16,6 +16,8 @@ return array(
 
 	'search' => 'Search',
 
+	'ask' => 'Ask',
+
 	'an' => 'A-',
 	'an' => 'A-',
 	'ap' => 'A+',
