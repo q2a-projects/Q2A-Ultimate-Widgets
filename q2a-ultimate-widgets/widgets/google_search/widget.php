@@ -17,7 +17,7 @@ class google_search {
 		$widget_name = get_class($this) . '_' .strtoupper(substr($region,0,1).substr($place,0,1)) ;
 		$title=get_widget_option($widget_name, 'uw_title');
 		$palceholder = get_widget_option($widget_name, 'uw_palceholder');;
-		$button = (bool)get_widget_option($widget_name, 'button');;
+		$button = (bool)get_widget_option($widget_name, 'uw_button');;
 
 		echo '<aside class="uw-google-search-widget">';
 		if($title)
@@ -26,7 +26,7 @@ class google_search {
 		echo '<form action="http://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">';
 		echo '<input name="sitesearch" type="hidden" value="' . qa_opt('site_url') . '">';
 		echo '<input autocomplete="on" class="uw-google-search-input" name="q" placeholder="' . $palceholder . '" required="required"  type="text">';
-		if($title)
+		if($button)
 			echo '<button class="uw-google-search-button" type="submit">' . qa_lang_html('uw/search') . '</button>';
 		echo '</form>';
 
