@@ -58,9 +58,9 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Button for Modal Pop Up
 - [x] Video(Youtube, Vimeo)
 - [x] Soundcloud Widget
-- [ ] Alert widgets
+- [x] Alert widgets
 - [ ] Social Media Links
-- [ ] Random Content: Randomly open one of the added content from list of texts
+- [x] Random Content: Randomly open one of the added content from list of texts
 
 ### Features:
 - [ ] Cache
