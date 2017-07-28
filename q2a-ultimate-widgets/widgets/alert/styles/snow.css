@@ -1,0 +1,38 @@
+.close.uw-alert-close {
+	float: right;
+    background: #aa0000 none repeat scroll 0 0;
+    border: 1px solid #880000;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    padding: 5px 10px;
+}
+.alert{
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+}
+.alert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+.alert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.alert-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.alert-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}

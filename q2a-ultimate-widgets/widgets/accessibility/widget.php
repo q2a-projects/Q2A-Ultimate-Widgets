@@ -28,6 +28,7 @@ class accessibility {
 		}
 		</style>
 		";
+		echo '<script src="' . UW_URL . 'include/cookie.js"></script>';
 		echo '<script src="' . UW_URL . 'include/accessibility.js"></script>';
 
 		echo '<aside class="uw-accessibility-widget">';
