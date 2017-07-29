@@ -1,0 +1,336 @@
+@import url("default/default.css");
+
+.social-nav a{
+    color: #fff;
+}
+
+.social-nav {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 10px auto;
+}
+.social-nav li {
+  display: inline-block;
+}
+.social-nav a {
+  display: inline-block;
+  float: left;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 48px;
+  position: relative;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+
+.social-nav li {
+  margin: 0 10px;
+}
+.social-nav a {
+  color: #fff;
+  overflow: hidden;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.social-nav a:hover {
+  background: #fff;
+  display: inline-block;
+}
+.social-nav a:hover i {
+  display: inline-block;
+  -moz-animation: 0.4s icon-move linear 0s;
+  -webkit-animation: 0.4s icon-move linear 0s;
+  animation: 0.4s icon-move linear 0s;
+}
+
+@-moz-keyframes icon-move {
+  49% {
+    -moz-transform: translateX(-40px);
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  50% {
+    -moz-transform: translateX(40px);
+    transform: translateX(40px);
+    opacity: 1;
+  }
+  80% {
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes icon-move {
+  49% {
+    -webkit-transform: translateX(-40px);
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes icon-move {
+  49% {
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -webkit-transform: translateX(-40px);
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  50% {
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+    opacity: 1;
+  }
+  80% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+
+.bg-color-icon-acrobat a:hover {color: #fff;}
+.bg-color-icon-amazon a:hover {color: #ffad1d; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-android a:hover {color: #a4c639;}
+.bg-color-icon-angellist a:hover {color: #000;}
+.bg-color-icon-aol a:hover {color: #f00;}
+.bg-color-icon-appnet a:hover {color: #3178bd;}
+.bg-color-icon-appstore a:hover {color: #000;}
+.bg-color-icon-askfm a:hover {color: #fd6547;}
+.bg-color-icon-betaseries a:hover {color: #0099e1;}
+.bg-color-icon-bitbucket a:hover {color: #205081;}
+.bg-color-icon-bitcoin a:hover {color: #efefef;}
+.bg-color-icon-blogger a:hover {color: #ee5a22;}
+.bg-color-icon-buffer a:hover {color: #232323;}
+.bg-color-icon-call a:hover {color: #008000;}
+.bg-color-icon-cal a:hover {color: #d63538;}
+.bg-color-icon-cart a:hover {color: #333;}
+.bg-color-icon-chrome a:hover {color: #006cd4;}
+.bg-color-icon-cloudapp a:hover {color: #312c2a;}
+.bg-color-icon-creativecommons a:hover {color: #000;}
+.bg-color-icon-delicious a:hover {color: #3271cb;}
+.bg-color-icon-deviantart a:hover {color: #475c4d;}
+.bg-color-icon-digg a:hover {color: #164673;}
+.bg-color-icon-discordapp a:hover {color: #7289da;}
+.bg-color-icon-disqus a:hover {color: #5d8aad;}
+.bg-color-icon-dribbble a:hover {color: #ea4c89;}
+.bg-color-icon-dropbox a:hover {color: #312c2a;}
+.bg-color-icon-drupal a:hover {color: #0077c0;}
+.bg-color-icon-dwolla a:hover {color: #e88c02;}
+.bg-color-icon-joinme a:hover {color: #FF8E00;}
+.bg-color-icon-email a:hover {color: #312c2a;}
+.bg-color-icon-eventasaurus a:hover {color: #192931;}
+.bg-color-icon-eventbrite a:hover {color: #ff5616;}
+.bg-color-icon-eventful a:hover {color: #47ab15;}
+.bg-color-icon-evernote a:hover {color: #6bb130;}
+.bg-color-icon-facebook a:hover {color: #4863ae;}
+.bg-color-icon-fivehundredpx a:hover {color: #333;}
+.bg-color-icon-flattr a:hover {color: #8aba42;}
+.bg-color-icon-flickr a:hover {color: #ff0084;}
+.bg-color-icon-forrst a:hover {color: #1e360d;}
+.bg-color-icon-foursquare a:hover {color: #44a8e0;}
+.bg-color-icon-github a:hover {color: #fbfbfb;}
+.bg-color-icon-gitlab a:hover {color: #e14329;}
+.bg-color-icon-gmail a:hover {color: #efefef;}
+.bg-color-icon-google a:hover {color: #4e6cf7;}
+.bg-color-icon-googleplay a:hover {color: #000;}
+.bg-color-icon-googleplus a:hover {color: #dd4b39;}
+.bg-color-icon-gowalla a:hover {color: #ff720a;}
+.bg-color-icon-grooveshark a:hover {color: #111;}
+.bg-color-icon-guest a:hover {color: #1b4d6d;}
+.bg-color-icon-html5 a:hover {color: #ff3617;}
+.bg-color-icon-ie a:hover {color: #00a1d9;}
+.bg-color-icon-instapaper a:hover {color: #eee;}
+.bg-color-icon-instagram a:hover {color: #3f729b;}
+.bg-color-icon-intensedebate a:hover {color: #0099e1;}
+.bg-color-icon-klout a:hover {color: #e34a25;}
+.bg-color-icon-itunes a:hover {color: #efefeb;}
+.bg-color-icon-lanyrd a:hover {color: #2e6ac2;}
+.bg-color-icon-lastfm a:hover {color: #dc1a23;}
+.bg-color-icon-lego a:hover {color: #fb0000;}
+.bg-color-icon-linkedin a:hover {color: #0083a8;}
+.bg-color-icon-lkdto a:hover {color: #7c786f;}
+.bg-color-icon-logmein a:hover {color: #000;}
+.bg-color-icon-macstore a:hover {color: #007dcb}
+.bg-color-icon-meetup a:hover {color: #ff0026;}
+.bg-color-icon-myspace a:hover {color: #000;}
+.bg-color-icon-ninetyninedesigns a:hover {color: #072243;}
+.bg-color-icon-openid a:hover {color: #f5f5f5;}
+.bg-color-icon-opentable a:hover {color: #990000;}
+.bg-color-icon-paypal a:hover {color: #32689a; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-persona a:hover {color: #1258a1;}
+.bg-color-icon-pinboard a:hover {color: blue;}
+.bg-color-icon-pinterest a:hover {color: #c91618;}
+.bg-color-icon-plancast a:hover {color: #e7ebed;}
+.bg-color-icon-plurk a:hover {color: #cf682f;}
+.bg-color-icon-pocket a:hover {color: #777;}
+.bg-color-icon-podcast a:hover {color: #9365ce;}
+.bg-color-icon-posterous a:hover {color: #bc7134;}
+.bg-color-icon-print a:hover {color: #f0f0eb; text-shadow: 0 1px 0 rgba(255,255,255,0.8);}
+.bg-color-icon-quora a:hover {color: #a82400;}
+.bg-color-icon-reddit a:hover {color: #222;}
+.bg-color-icon-rss a:hover {color: #ff7f25;}
+.bg-color-icon-scribd a:hover {color: #231c1a;}
+.bg-color-icon-skype a:hover {color: #00a2ed;}
+.bg-color-icon-smashing a:hover {color: #ff4f27;}
+.bg-color-icon-songkick a:hover {color: #ff0050;}
+.bg-color-icon-soundcloud a:hover {color: #ff4500;}
+.bg-color-icon-spotify a:hover {color: #60af00;}
+.bg-color-icon-stackoverflow a:hover {color: #555;}
+.bg-color-icon-statusnet a:hover {color: #829d25;}
+.bg-color-icon-steam a:hover {color: #000;}
+.bg-color-icon-stripe a:hover {color: #2f7ed6;}
+.bg-color-icon-stumbleupon a:hover {color: #eb4924;}
+.bg-color-icon-tumblr a:hover {color: #374a61;}
+.bg-color-icon-twitter a:hover {color: #46c0fb;}
+.bg-color-icon-twitch a:hover {color: #6441A5;}
+.bg-color-icon-viadeo a:hover {color: #000;}
+.bg-color-icon-vimeo a:hover {color: #00a2cd;}
+.bg-color-icon-vk a:hover {color: #45688E;}
+.bg-color-icon-weibo a:hover {color: #faf6f1;}
+.bg-color-icon-wikipedia a:hover {color: #000;}
+.bg-color-icon-windows a:hover {color: #0052a4;}
+.bg-color-icon-wordpress a:hover {color: #464646;}
+.bg-color-icon-www a:hover {color: #000;}
+.bg-color-icon-xing a:hover {color: #0a5d5e;}
+.bg-color-icon-yahoo a:hover {color: #a200c2;}
+.bg-color-icon-ycombinator a:hover {color: #ff6600;}
+.bg-color-icon-yelp a:hover {color: #e60010;}
+.bg-color-icon-youtube a:hover {color: #f00;}
+.bg-color-icon-houzz a:hover {color: #9ac641;}
+.bg-color-icon-slack a:hover {color: #3eb890;}
+.bg-color-icon-pandora a:hover {color: #4e9cca;}
+.bg-color-icon-aim a:hover {color: #E63114;}
+.bg-color-icon-acrobat a {background-color: #fff; color: #000;}
+.bg-color-icon-amazon a {background-color: #ffad1d; color: #030037; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-android a {background-color: #a4c639;}
+.bg-color-icon-angellist a {background-color: #000;}
+.bg-color-icon-aol a {background-color: #f00;}
+.bg-color-icon-appnet a {background-color: #3178bd;}
+.bg-color-icon-appstore a {background-color: #000;}
+.bg-color-icon-askfm a {background-color: #fd6547;}
+.bg-color-icon-betaseries a {background-color: #0099e1;}
+.bg-color-icon-bitbucket a {background-color: #205081;}
+.bg-color-icon-bitcoin a {background-color: #efefef; color: #4d4d4d;}
+.bg-color-icon-blogger a {background-color: #ee5a22;}
+.bg-color-icon-buffer a {background-color: #232323;}
+.bg-color-icon-call a {background-color: #008000;}
+.bg-color-icon-cal a {background-color: #d63538;}
+.bg-color-icon-cart a {background-color: #333;}
+.bg-color-icon-chrome a {background-color: #006cd4;}
+.bg-color-icon-cloudapp a {background-color: #fff; color: #312c2a;}
+.bg-color-icon-creativecommons a {background-color: #000;}
+.bg-color-icon-delicious a {background-color: #3271cb;}
+.bg-color-icon-deviantart a {background-color: #475c4d;}
+.bg-color-icon-digg a {background-color: #164673;}
+.bg-color-icon-discordapp a {background-color: #7289da; color: #fff;}
+.bg-color-icon-disqus a {background-color: #5d8aad;}
+.bg-color-icon-dribbble a {background-color: #ea4c89;}
+.bg-color-icon-dropbox a {background-color: #fff; color: #312c2a;}
+.bg-color-icon-drupal a {background-color: #0077c0; color: #fff;}
+.bg-color-icon-dwolla a {background-color: #e88c02;}
+.bg-color-icon-joinme a {background-color: #FF8E00;}
+.bg-color-icon-email a {background-color: #f0f0eb; color: #312c2a;}
+.bg-color-icon-eventasaurus a {background-color: #192931; color: #fff;}
+.bg-color-icon-eventbrite a {background-color: #ff5616;}
+.bg-color-icon-eventful a {background-color: #fff; color: #47ab15;}
+.bg-color-icon-evernote a {background-color: #6bb130; color: #fff;}
+.bg-color-icon-facebook a {background-color: #4863ae;}
+.bg-color-icon-fivehundredpx a {background-color: #333;}
+.bg-color-icon-flattr a {background-color: #8aba42;}
+.bg-color-icon-flickr a {background-color: #ff0084;}
+.bg-color-icon-forrst a {background-color: #1e360d;}
+.bg-color-icon-foursquare a {background-color: #44a8e0;}
+.bg-color-icon-github a {background-color: #fbfbfb; color: #050505;}
+.bg-color-icon-gitlab a {background-color: #fff; color: #e14329;}
+.bg-color-icon-gmail a {background-color: #efefef; color: #222;}
+.bg-color-icon-google a {background-color: #4e6cf7;}
+.bg-color-icon-googleplay a {background-color: #000;}
+.bg-color-icon-googleplus a {background-color: #dd4b39;}
+.bg-color-icon-gowalla a {background-color: #ff720a;}
+.bg-color-icon-grooveshark a {background-color: #111; color:#eee;}
+.bg-color-icon-guest a {background-color: #1b4d6d;}
+.bg-color-icon-html5 a {background-color: #ff3617;}
+.bg-color-icon-ie a {background-color: #00a1d9;}
+.bg-color-icon-instapaper a {background-color: #eee; color: #222;}
+.bg-color-icon-instagram a {background-color: #3f729b;}
+.bg-color-icon-intensedebate a {background-color: #0099e1;}
+.bg-color-icon-klout a {background-color: #e34a25;}
+.bg-color-icon-itunes a {background-color: #efefeb; color: #312c2a;}
+.bg-color-icon-lanyrd a {background-color: #2e6ac2;}
+.bg-color-icon-lastfm a {background-color: #dc1a23;}
+.bg-color-icon-lego a {background-color: #fb0000;}
+.bg-color-icon-linkedin a {background-color: #0083a8;}
+.bg-color-icon-lkdto a {background-color: #7c786f;}
+.bg-color-icon-logmein a {background-color: #000;}
+.bg-color-icon-macstore a {background-color: #007dcb}
+.bg-color-icon-meetup a {background-color: #ff0026;}
+.bg-color-icon-myspace a {background-color: #000;}
+.bg-color-icon-ninetyninedesigns a {background-color: #fff; color: #072243;}
+.bg-color-icon-openid a {background-color: #f5f5f5; color: #333;}
+.bg-color-icon-opentable a {background-color: #990000;}
+.bg-color-icon-paypal a {background-color: #fff; color: #32689a; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-persona a {background-color: #1258a1; color: #fff;}
+.bg-color-icon-pinboard a {background-color: blue;}
+.bg-color-icon-pinterest a {background-color: #c91618;}
+.bg-color-icon-plancast a {background-color: #e7ebed; color: #333;}
+.bg-color-icon-plurk a {background-color: #cf682f;}
+.bg-color-icon-pocket a {background-color: #fff; color: #777;}
+.bg-color-icon-podcast a {background-color: #9365ce;}
+.bg-color-icon-posterous a {background-color: #ffd959; color: #bc7134;}
+.bg-color-icon-print a {background-color: #f0f0eb; color: #222; text-shadow: 0 1px 0 rgba(255,255,255,0.8);}
+.bg-color-icon-quora a {background-color: #a82400;}
+.bg-color-icon-reddit a {background-color: #fff; color: #222;}
+.bg-color-icon-rss a {background-color: #ff7f25;}
+.bg-color-icon-scribd a {background-color: #231c1a;}
+.bg-color-icon-skype a {background-color: #00a2ed;}
+.bg-color-icon-smashing a {background-color: #ff4f27;}
+.bg-color-icon-songkick a {background-color: #ff0050;}
+.bg-color-icon-soundcloud a {background-color: #ff4500;}
+.bg-color-icon-spotify a {background-color: #60af00;}
+.bg-color-icon-stackoverflow a {background-color: #fff; color: #555;}
+.bg-color-icon-statusnet a {background-color: #829d25;}
+.bg-color-icon-steam a {background-color: #000;}
+.bg-color-icon-stripe a {background-color: #2f7ed6;}
+.bg-color-icon-stumbleupon a {background-color: #eb4924;}
+.bg-color-icon-tumblr a {background-color: #374a61;}
+.bg-color-icon-twitter a {background-color: #46c0fb;}
+.bg-color-icon-twitch a {background-color: #6441A5;}
+.bg-color-icon-viadeo a {background-color: #fff;  color: #000;}
+.bg-color-icon-vimeo a {background-color: #00a2cd;}
+.bg-color-icon-vk a {background-color: #45688E;}
+.bg-color-icon-weibo a {background-color: #faf6f1; color: #000;}
+.bg-color-icon-wikipedia a {background-color: #fff; color: #000;}
+.bg-color-icon-windows a {background-color: #0052a4; color: #fff;}
+.bg-color-icon-wordpress a {background-color: #464646;}
+.bg-color-icon-www a {background-color: #fff; color: #000;}
+.bg-color-icon-xing a {background-color: #0a5d5e;}
+.bg-color-icon-yahoo a {background-color: #a200c2;}
+.bg-color-icon-ycombinator a {background-color: #ff6600;}
+.bg-color-icon-yelp a {background-color: #e60010;}
+.bg-color-icon-youtube a {background-color: #f00;}
+.bg-color-icon-houzz a {background-color: #9ac641; color: #fff;}
+.bg-color-icon-slack a {background-color: #3eb890; color: #fff;}
+.bg-color-icon-pandora a {background-color: #4e9cca; color: #fff;}
+.bg-color-icon-aim a {background-color: #E63114; color: #fff;}

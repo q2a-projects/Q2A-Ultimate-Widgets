@@ -1,0 +1,111 @@
+.bg-color-icon-acrobat {background-color: #fff; color: #000;}
+.bg-color-icon-amazon {background-color: #ffad1d; color: #030037; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-android {background-color: #a4c639;}
+.bg-color-icon-angellist {background-color: #000;}
+.bg-color-icon-aol {background-color: #f00;}
+.bg-color-icon-appnet {background-color: #3178bd;}
+.bg-color-icon-appstore {background-color: #000;}
+.bg-color-icon-askfm {background-color: #fd6547;}
+.bg-color-icon-betaseries {background-color: #0099e1;}
+.bg-color-icon-bitbucket {background-color: #205081;}
+.bg-color-icon-bitcoin {background-color: #efefef; color: #4d4d4d;}
+.bg-color-icon-blogger {background-color: #ee5a22;}
+.bg-color-icon-buffer {background-color: #232323;}
+.bg-color-icon-call {background-color: #008000;}
+.bg-color-icon-cal {background-color: #d63538;}
+.bg-color-icon-cart {background-color: #333;}
+.bg-color-icon-chrome {background-color: #006cd4;}
+.bg-color-icon-cloudapp {background-color: #fff; color: #312c2a;}
+.bg-color-icon-creativecommons {background-color: #000;}
+.bg-color-icon-delicious {background-color: #3271cb;}
+.bg-color-icon-deviantart {background-color: #475c4d;}
+.bg-color-icon-digg {background-color: #164673;}
+.bg-color-icon-discordapp {background-color: #7289da; color: #fff;}
+.bg-color-icon-disqus {background-color: #5d8aad;}
+.bg-color-icon-dribbble {background-color: #ea4c89;}
+.bg-color-icon-dropbox {background-color: #fff; color: #312c2a;}
+.bg-color-icon-drupal {background-color: #0077c0; color: #fff;}
+.bg-color-icon-dwolla {background-color: #e88c02;}
+.bg-color-icon-joinme {background-color: #FF8E00;}
+.bg-color-icon-email {background-color: #f0f0eb; color: #312c2a;}
+.bg-color-icon-eventasaurus {background-color: #192931; color: #fff;}
+.bg-color-icon-eventbrite {background-color: #ff5616;}
+.bg-color-icon-eventful {background-color: #fff; color: #47ab15;}
+.bg-color-icon-evernote {background-color: #6bb130; color: #fff;}
+.bg-color-icon-facebook {background-color: #4863ae;}
+.bg-color-icon-fivehundredpx {background-color: #333;}
+.bg-color-icon-flattr {background-color: #8aba42;}
+.bg-color-icon-flickr {background-color: #ff0084;}
+.bg-color-icon-forrst {background-color: #1e360d;}
+.bg-color-icon-foursquare {background-color: #44a8e0;}
+.bg-color-icon-github {background-color: #fbfbfb; color: #050505;}
+.bg-color-icon-gitlab {background-color: #fff; color: #e14329;}
+.bg-color-icon-gmail {background-color: #efefef; color: #222;}
+.bg-color-icon-google {background-color: #4e6cf7;}
+.bg-color-icon-googleplay {background-color: #000;}
+.bg-color-icon-googleplus {background-color: #dd4b39;}
+.bg-color-icon-gowalla {background-color: #ff720a;}
+.bg-color-icon-grooveshark {background-color: #111; color:#eee;}
+.bg-color-icon-guest {background-color: #1b4d6d;}
+.bg-color-icon-html5 {background-color: #ff3617;}
+.bg-color-icon-ie {background-color: #00a1d9;}
+.bg-color-icon-instapaper {background-color: #eee; color: #222;}
+.bg-color-icon-instagram {background-color: #3f729b;}
+.bg-color-icon-intensedebate {background-color: #0099e1;}
+.bg-color-icon-klout {background-color: #e34a25;}
+.bg-color-icon-itunes {background-color: #efefeb; color: #312c2a;}
+.bg-color-icon-lanyrd {background-color: #2e6ac2;}
+.bg-color-icon-lastfm {background-color: #dc1a23;}
+.bg-color-icon-lego {background-color: #fb0000;}
+.bg-color-icon-linkedin {background-color: #0083a8;}
+.bg-color-icon-lkdto {background-color: #7c786f;}
+.bg-color-icon-logmein {background-color: #000;}
+.bg-color-icon-macstore {background-color: #007dcb}
+.bg-color-icon-meetup {background-color: #ff0026;}
+.bg-color-icon-myspace {background-color: #000;}
+.bg-color-icon-ninetyninedesigns {background-color: #fff; color: #072243;}
+.bg-color-icon-openid {background-color: #f5f5f5; color: #333;}
+.bg-color-icon-opentable {background-color: #990000;}
+.bg-color-icon-paypal {background-color: #fff; color: #32689a; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.bg-color-icon-persona {background-color: #1258a1; color: #fff;}
+.bg-color-icon-pinboard {background-color: blue;}
+.bg-color-icon-pinterest {background-color: #c91618;}
+.bg-color-icon-plancast {background-color: #e7ebed; color: #333;}
+.bg-color-icon-plurk {background-color: #cf682f;}
+.bg-color-icon-pocket {background-color: #fff; color: #777;}
+.bg-color-icon-podcast {background-color: #9365ce;}
+.bg-color-icon-posterous {background-color: #ffd959; color: #bc7134;}
+.bg-color-icon-print {background-color: #f0f0eb; color: #222; text-shadow: 0 1px 0 rgba(255,255,255,0.8);}
+.bg-color-icon-quora {background-color: #a82400;}
+.bg-color-icon-reddit {background-color: #fff; color: #222;}
+.bg-color-icon-rss {background-color: #ff7f25;}
+.bg-color-icon-scribd {background-color: #231c1a;}
+.bg-color-icon-skype {background-color: #00a2ed;}
+.bg-color-icon-smashing {background-color: #ff4f27;}
+.bg-color-icon-songkick {background-color: #ff0050;}
+.bg-color-icon-soundcloud {background-color: #ff4500;}
+.bg-color-icon-spotify {background-color: #60af00;}
+.bg-color-icon-stackoverflow {background-color: #fff; color: #555;}
+.bg-color-icon-statusnet {background-color: #829d25;}
+.bg-color-icon-steam {background-color: #000;}
+.bg-color-icon-stripe {background-color: #2f7ed6;}
+.bg-color-icon-stumbleupon {background-color: #eb4924;}
+.bg-color-icon-tumblr {background-color: #374a61;}
+.bg-color-icon-twitter {background-color: #46c0fb;}
+.bg-color-icon-twitch {background-color: #6441A5;}
+.bg-color-icon-viadeo {background-color: #fff;  color: #000;}
+.bg-color-icon-vimeo {background-color: #00a2cd;}
+.bg-color-icon-vk {background-color: #45688E;}
+.bg-color-icon-weibo {background-color: #faf6f1; color: #000;}
+.bg-color-icon-wikipedia {background-color: #fff; color: #000;}
+.bg-color-icon-windows {background-color: #0052a4; color: #fff;}
+.bg-color-icon-wordpress {background-color: #464646;}
+.bg-color-icon-www {background-color: #fff; color: #000;}
+.bg-color-icon-xing {background-color: #0a5d5e;}
+.bg-color-icon-yahoo {background-color: #a200c2;}
+.bg-color-icon-ycombinator {background-color: #ff6600;}
+.bg-color-icon-yelp {background-color: #e60010;}
+.bg-color-icon-youtube {background-color: #f00;}
+.bg-color-icon-houzz {background-color: #9ac641; color: #fff;}
+.bg-color-icon-slack {background-color: #3eb890; color: #fff;}
+.bg-color-icon-pandora {background-color: #4e9cca; color: #fff;}
