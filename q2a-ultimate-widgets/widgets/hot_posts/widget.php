@@ -48,7 +48,7 @@ class hot_posts {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
@@ -58,7 +58,7 @@ class hot_posts {
 			}
 			echo '<li class="uw-hot-posts-link-body">';
 			echo '<a class="uw-hot-posts-link" href="' . $questionlink . '">';
-			echo $thumb . '<span class="uw-hot-posts-title">'. $question['title'] . '</span>';
+			echo $thumb . '<span class="uw-category-posts-title">'. htmlspecialchars($question['title']) . '</span>';
 			echo '<span class="uw-hot-posts-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';

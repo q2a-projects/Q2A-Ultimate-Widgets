@@ -69,7 +69,7 @@ class category_posts {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
@@ -78,7 +78,7 @@ class category_posts {
 					$thumb= '<img class="uw-category-posts-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
 			echo '<li class="uw-category-posts-link-body">';
-			echo '<a class="uw-category-posts-link" href="' . htmlspecialchars($questionlink) . '">';
+			echo '<a class="uw-category-posts-link" href="' . $questionlink . '">';
 			echo $thumb . '<span class="uw-category-posts-title">'. htmlspecialchars($question['title']) . '</span>';
 			echo '<span class="uw-category-posts-time">' . $when . '</span></a></li>';
 		}		

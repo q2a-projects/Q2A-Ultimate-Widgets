@@ -54,7 +54,7 @@ class recent_activity {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
@@ -64,7 +64,7 @@ class recent_activity {
 			}
 			echo '<li class="uw-recent-activity-link-body">';
 			echo '<a class="uw-recent-activity-link" href="' . $questionlink . '">';
-			echo $thumb . '<span class="uw-recent-activity-title">'. $question['title'] . '</span>';
+			echo $thumb . '<span class="uw-recent-activity-title">'. htmlspecialchars($question['title']) . '</span>';
 			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';

@@ -48,7 +48,7 @@ class recent_posts {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
@@ -58,7 +58,7 @@ class recent_posts {
 			}
 			echo '<li class="uw-recent-posts-link-body">';
 			echo '<a class="uw-recent-posts-link" href="' . $questionlink . '">';
-			echo $thumb . '<span class="uw-recent-posts-title">'. $question['title'] . '</span>';
+			echo $thumb . '<span class="uw-recent-posts-title">'. htmlspecialchars($question['title']) . '</span>';
 			echo '<span class="uw-recent-posts-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
