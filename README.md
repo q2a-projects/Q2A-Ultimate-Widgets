@@ -38,7 +38,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] PHP Code Widget
 - [x] Accessibility Widget(Buttons for live font size change and night mode)
 - [x] MailChimp Widget
-- [ ] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
+- [x] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
 
 ### Static Content
 - [x] Text & HTML
