@@ -11,13 +11,6 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 3. In Q2A, login as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
 
 ## To Do
-### Users Widgets
-- [ ] Todays Top Users
-- [ ] Week's Top Users
-- [ ] Month's Top Users
-- [ ] All Time Top Users
-- [ ] New Users
-- [ ] Top users in each category in the week / month
 
 ### Question List
 - [x] Activity
@@ -29,16 +22,11 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Random Post
 - [x] Questions from people I follow
 - [ ] Tab: combine other list in tabs
-- [ ] Post Carousel 
-- [ ] Category Posts: Questions from opened post's category
-- [ ] Posts from specific category
-- [ ] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
+- [x] Category Posts: Questions from opened post's category
 
 ### Login
 - [x] WordPress Login
-- [ ] WordPress SignUp(Tab with login form)
 - [x] Q2A Login
-- [ ] Q2A SignUp Tabs
 
 ### Other
 - [x] Ask form
@@ -50,10 +38,10 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] PHP Code Widget
 - [x] Accessibility Widget(Buttons for live font size change and night mode)
 - [x] MailChimp Widget
+- [ ] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
 
 ### Static Content
 - [x] Text & HTML
-- [ ] Image Slider
 - [x] Image(optional link)
 - [x] Button for Modal Pop Up
 - [x] Video(Youtube, Vimeo)
@@ -84,6 +72,11 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Github
 - [ ] Flickr Stream
 - [ ] Patreon Button & Widgets
+- [ ] Posts from specific category
+- [ ] Image Slider
+- [ ] WordPress SignUp(Tab with login form)
+- [ ] Q2A SignUp Tabs
+- [ ] Post Carousel 
 
 ## Author
 
