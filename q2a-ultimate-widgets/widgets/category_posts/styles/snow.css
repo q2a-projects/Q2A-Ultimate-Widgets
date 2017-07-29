@@ -1,29 +1,29 @@
-.uw-recent-activity-widget {
+.uw-category-posts-widget {
     padding: 5px;
 }
-.uw-recent-activity-widget h2 {
+.uw-category-posts-widget h2 {
     padding: 5px !important;
 }
-.uw-recent-activity-list {
+.uw-category-posts-list {
 	list-style: outside none none;
 	padding: 0 20px;
 }
-.uw-recent-activity-thumbnail {
+.uw-category-posts-thumbnail {
     float: left;
     margin: 0 5px 0 0;
 }
-.uw-recent-activity-link{
+.uw-category-posts-link{
 	width: 100%;
 }
-.uw-recent-activity-time {
+.uw-category-posts-time {
     float: right;
     font-size: 14px;
     font-style: italic;
 }
-.uw-recent-activity-link-body {
+.uw-category-posts-link-body {
     border-bottom: 1px solid #ddd;
     margin: 5px 0;
 }
-.uw-recent-activity-link-body:last-child {
+.uw-category-posts-link-body:last-child {
     border-bottom: none;
 }
