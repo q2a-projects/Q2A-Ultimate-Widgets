@@ -59,7 +59,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Video(Youtube, Vimeo)
 - [x] Soundcloud Widget
 - [x] Alert widgets
-- [ ] Social Media Links
+- [x] Social Media Links
 - [x] Random Content: Randomly open one of the added content from list of texts
 
 ### Features:
