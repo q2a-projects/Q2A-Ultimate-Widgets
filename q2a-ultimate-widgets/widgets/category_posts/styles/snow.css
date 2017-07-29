@@ -1,0 +1,29 @@
+.uw-recent-activity-widget {
+    padding: 5px;
+}
+.uw-recent-activity-widget h2 {
+    padding: 5px !important;
+}
+.uw-recent-activity-list {
+	list-style: outside none none;
+	padding: 0 20px;
+}
+.uw-recent-activity-thumbnail {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.uw-recent-activity-link{
+	width: 100%;
+}
+.uw-recent-activity-time {
+    float: right;
+    font-size: 14px;
+    font-style: italic;
+}
+.uw-recent-activity-link-body {
+    border-bottom: 1px solid #ddd;
+    margin: 5px 0;
+}
+.uw-recent-activity-link-body:last-child {
+    border-bottom: none;
+}

@@ -33,6 +33,7 @@ qa_register_plugin_overrides('overrides.php');
 
 global $uw_widgets;
 $uw_widgets = array(
+    'category_posts' => 'Ultimate Widgets - Category Posts',
     'social_links' => 'Ultimate Widgets - Social Links',
     'random_content' => 'Ultimate Widgets - Random Content',
     'alert' => 'Ultimate Widgets - Alert Box',
