@@ -77,7 +77,8 @@ class qa_html_theme_layer extends qa_html_theme_base {
 		if($styles)
 			foreach ($styles as $widget_name => $files)
 				foreach ($files as $file => $verified)
-					$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
+					if( $file != 'none' )
+						$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
 	}	
 
 }
