@@ -21,8 +21,9 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Most Voted
 - [x] Random Post
 - [x] Questions from people I follow
-- [ ] Tab: combine other list in tabs
+- [x] Tab: combine other list in tabs
 - [x] Category Posts: Questions from opened post's category
+- [x] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
 
 ### Login
 - [x] WordPress Login
@@ -38,7 +39,6 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] PHP Code Widget
 - [x] Accessibility Widget(Buttons for live font size change and night mode)
 - [x] MailChimp Widget
-- [x] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
 
 ### Static Content
 - [x] Text & HTML
