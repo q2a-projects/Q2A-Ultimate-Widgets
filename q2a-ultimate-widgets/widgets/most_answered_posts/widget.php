@@ -1,7 +1,8 @@
 <?php
 
 class most_answered_posts {
-	
+	public $allow_cache = true;
+
 	function allow_template($template)
 	{
 		return true;

@@ -6,29 +6,50 @@ function get_widget_options($widget_key){
 		$widget_options[$option_key] = json_decode( qa_opt($option_key), true);
 	return $widget_options[$option_key];
 }
-function get_widget_option($option_key, $option){
-	$options = get_widget_options($option_key);
+function get_widget_option($widget_key, $option){
+	$options = get_widget_options($widget_key);
 	return @$options[$option];
 }
-function get_widget_option_fields($widget_name, $option_key){
+function get_widget_option_fields($widget_key, $option_key){
 	// get $widget_options from file
-	include UW_DIR.'/widgets/'.$widget_name.'/options.php'; // get local variable for options from widget module
-	if( function_exists($widget_name) )
-		$widget_options = $widget_name($widget_options, $option_key);
+	include UW_DIR.'/widgets/'.$widget_key.'/options.php'; // get local variable for options from widget module
+	if( function_exists($widget_key) )
+		$widget_options = $widget_key($widget_options, $option_key);
 	return $widget_options;
 }
 
-function get_widget_option_form($widget_name, $option_key){
-	$fields = get_widget_option_fields($widget_name, $option_key);
+function get_widget_option_form($widget_key, $option_key){
+	$fields = get_widget_option_fields($widget_key, $option_key);
 	$options = get_widget_options($option_key);
 	// add a header to all plugin options to let admins know that it's a Plugin Specific section
 	if( count($fields)>0 )
-		$fields = array('__uw_options_header' => array(
+		$fields = array('__uw_options_header_css' => array(
 					'label' => '<hr><h3>Widget Options <small>for Ultimate Widgets plugin</small></h3>',
 					'type' => 'static',
 				)) + $fields;
+	// if widget can store cache, show cache options
+		$fields = array('uw_cache_exp_type' => array(
+					'label' => 'Refresh cache each:',
+					'options' => array('second'=>'Second', 'minute'=>'Minute', 'hour'=>'Hour', 'day' => 'Day',),
+					'type' => 'select',
+					'default-value' => 'minute',
+					'tags' => 'NAME="uw_cache_exp_type"',
+					'match_by' => 'key',
+				)) + $fields;
+		$fields = array('uw_cache_exp_delay' => array(
+					'label' => 'Refresh Time:',
+					'type' => 'number',
+					'default-value' => 10,
+					'tags' => 'NAME="uw_cache_exp_delay"',
+					'match_by' => 'key',
+				)) + $fields;
+		// a header to attract attention to styling options
+		$fields = array('__uw_cache_header' => array(
+					'label' => '<hr><h3>Cache Options</h3>',
+					'type' => 'static',
+				)) + $fields;
 	// if there are css files in this widget add them to options
-	$styles_path = UW_DIR.'/widgets/'.$widget_name.'/styles/';
+	$styles_path = UW_DIR.'/widgets/'.$widget_key.'/styles/';
 	if(file_exists($styles_path)){
 		// Select list for choosing a css file
 		$fields = array('uw_styles' => array(
@@ -52,6 +73,7 @@ function get_widget_option_form($widget_name, $option_key){
 		//if( !$active_style or $active_style='' or $active_style=='none' )
 		//	$fields['uw_styles']['options']['value'] = 'none';
 	}
+
 	// set default values
 	foreach ($fields as $key => $field) {
 		if( isset($options[$key]) )

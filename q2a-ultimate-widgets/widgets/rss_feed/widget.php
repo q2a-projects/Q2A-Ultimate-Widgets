@@ -1,6 +1,7 @@
 <?php
 
 class rss_feed {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{

@@ -1,6 +1,7 @@
 <?php
 
 class recent_posts {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{

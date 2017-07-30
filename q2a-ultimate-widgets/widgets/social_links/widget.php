@@ -1,6 +1,7 @@
 <?php
 
 class social_links {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{

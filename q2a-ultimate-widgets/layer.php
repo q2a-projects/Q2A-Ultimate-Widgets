@@ -81,5 +81,55 @@ class qa_html_theme_layer extends qa_html_theme_base {
 						$this->output('<link rel="stylesheet" href="'.UW_URL.'widgets/'.$widget_name.'/styles/'.$file.'"/>');
 	}	
 
+	public function widgets($region, $place)
+	{
+		if (count(@$this->content['widgets'][$region][$place])) {
+			$this->output('<div class="qa-widgets-'.$region.' qa-widgets-'.$region.'-'.$place.'">');
+
+			foreach ($this->content['widgets'][$region][$place] as $module) {
+				$this->output('<div class="qa-widget-'.$region.' qa-widget-'.$region.'-'.$place.'">');
+				if(isset($module->allow_cache) and $module->allow_cache===true){
+					$widget_key = get_class($module) . '_' .strtoupper(substr($region,0,1).substr($place,0,1)) ;
+					$cache = unserialize( qa_opt('uw_cache_'.$widget_key) );
+					$cache_expiration_type = get_widget_option($widget_key, 'uw_cache_exp_type');
+					$cache_expiration_delay = (int)get_widget_option($widget_key, 'uw_cache_exp_delay');
+					switch ($cache_expiration_type) {
+						case 'second':
+							$cache_expiration = $cache_expiration_delay;
+							break;
+						case 'minute':
+							$cache_expiration = $cache_expiration_delay*60;
+							break;
+						case 'hour':
+							$cache_expiration = $cache_expiration_delay*3600; //60*60
+							break;
+						case 'day':
+							$cache_expiration = $cache_expiration_delay*86400; //60*60*24
+							break;
+					}
+					if(! isset($cache['expiration']) or @$cache['expiration']+$cache_expiration < time()){
+						require_once UW_DIR.'/minifier.php';
+						$cache['expiration'] = time();
+						ob_start();
+						$module->output_widget($region, $place, $this, $this->template, $this->request, $this->content);
+						$widget_text = ob_get_clean();
+						// HTML Minifier for making cache text smaller, because Q2A option field only stores 8000 charachters
+						if(strlen($widget_text)>=8000)
+							$cache['data'] = minify_html($widget_text);
+						else
+							$cache['data'] = $widget_text;
+						$cache_text = serialize($cache);
+						if(strlen($cache_text)<8000) // there is a limit on how long the stored data in ^options can be
+							qa_opt('uw_cache_'.$widget_key, $cache_text);
+					}
+					echo $cache['data'];
+				}else
+					$module->output_widget($region, $place, $this, $this->template, $this->request, $this->content);
+				$this->output('</div>');
+			}
+
+			$this->output('</div>', '');
+		}
+	}
 }
 

@@ -1,6 +1,7 @@
 <?php
 
 class trending_topics {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{
