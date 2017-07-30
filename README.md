@@ -10,7 +10,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 2. upload it to your Q2A site's plugin directory (e.g. `qa-plugin/q2a-ultimate-widgets`).
 3. In Q2A, login as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
 
-## To Do
+## Available Widgets
 
 ### Question List
 - [x] Activity
@@ -23,11 +23,11 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Questions from people I follow
 - [x] Tab: combine other list in tabs
 - [x] Category Posts: Questions from opened post's category
-- [x] Reminder to choose best answer on for user questions with enought points in answers or enough number of answers
+- [x] Reminder to choose best answer for user's questions with enought points in answers or enough number of answers
 
 ### Login
-- [x] WordPress Login
-- [x] Q2A Login
+- [x] WordPress Login Form
+- [x] Q2A Login Form
 
 ### Other
 - [x] Ask form
@@ -51,9 +51,8 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Random Content: Randomly open one of the added content from list of texts
 
 ### Features:
-- [ ] Cache
+- [x] Cache
 - [x] Styling
-- [ ] Merge widget's css files into a single file and use it instead of seperate files
 - [x] Individual Widget Options
 - [ ] Conditional Widgets
 
@@ -64,7 +63,7 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Friends and Followers in profile page 
 - [ ] User Points 
 
-### Do Later(Lowwer Priority):
+### Do Later(Lower Priority):
 - [ ] Social: Twitter, Google+, FaceBook
 - [ ] Google Plus Badge Widget
 - [ ] Google Maps
@@ -74,9 +73,10 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [ ] Patreon Button & Widgets
 - [ ] Posts from specific category
 - [ ] Image Slider
+- [ ] Post Carousel 
 - [ ] WordPress SignUp(Tab with login form)
 - [ ] Q2A SignUp Tabs
-- [ ] Post Carousel 
+- [ ] Merge widget's css files into a single file and use it instead of seperate files
 
 ## Author
 
