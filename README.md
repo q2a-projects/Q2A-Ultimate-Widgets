@@ -54,14 +54,13 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Cache
 - [x] Styling
 - [x] Individual Widget Options
-- [ ] Conditional Widgets
+- [x] Conditional Widgets
 
 ### Filters(Conditional Widgets)
-- [ ] Visitors/Users
-- [ ] Moderators,Admins/Users
-- [ ] Mobile/Desktop
-- [ ] Friends and Followers in profile page 
-- [ ] User Points 
+- [x] Visitors/Users
+- [x] Moderators,Admins/Users
+- [x] Mobile/Desktop
+- [x] User Points 
 
 ### Do Later(Lower Priority):
 - [ ] Social: Twitter, Google+, FaceBook

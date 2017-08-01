@@ -27,27 +27,78 @@ function get_widget_option_form($widget_key, $option_key){
 					'label' => '<hr><h3>Widget Options <small>for Ultimate Widgets plugin</small></h3>',
 					'type' => 'static',
 				)) + $fields;
-	// if widget can store cache, show cache options
-		$fields = array('uw_cache_exp_type' => array(
-					'label' => 'Refresh cache each:',
-					'options' => array('second'=>'Second', 'minute'=>'Minute', 'hour'=>'Hour', 'day' => 'Day',),
+	// Show filtering option(Conditional Widgets)
+		$filter_points = (bool)@$options['uw_filter_user_point_enable'] ? ' checked=""' : '';
+		$point_type = @$options['uw_filter_user_point_type'];
+		$points = (int)@$options['uw_filter_user_point_value'];
+		$less_select = ($point_type=='less')? ' selected':'';
+		$more_select = ($point_type=='more')? ' selected':'';
+		$fields = array('uw_filter_user_points' => array(
+					'label' => '',
+					'html' => '
+<label><input name="uw_filter_user_point_enable"' . $filter_points . ' value="1" class="qa-form-tall-checkbox" type="checkbox">Filter for points</label>
+, And for users only show widgets to those with 
+<select name="uw_filter_user_point_type" class="qa-form-tall-select"><option value="less"' . $less_select . '>less</option><option value="more"' . $more_select . '>more</option></select>
+than
+<input class="qa-form-tall-number" name="uw_filter_user_point_value" value="' . $points . '" type="text"> points.
+					',
+					'type' => 'custom',
+					'tags' => 'NAME="uw_filter_user_points"',
+				)) + $fields;
+		$fields = array('uw_filter_user_special' => array(
+					'label' => 'For Users, show widget to:',
+					'options' => array('anybody'=>'Anybody', 'users'=>'Only Normal Users', 'special'=>'Only Special Users(Adminss, Moderators, Editors, Experts)'),
 					'type' => 'select',
-					'default-value' => 'minute',
-					'tags' => 'NAME="uw_cache_exp_type"',
+					'default-value' => 'anybody',
+					'tags' => 'NAME="uw_filter_user_special"',
 					'match_by' => 'key',
 				)) + $fields;
-		$fields = array('uw_cache_exp_delay' => array(
-					'label' => 'Refresh Time:',
-					'type' => 'number',
-					'default-value' => 10,
-					'tags' => 'NAME="uw_cache_exp_delay"',
+		$fields = array('uw_filter_user' => array(
+					'label' => 'Show widget to:',
+					'options' => array('anybody'=>'Anybody', 'visitors'=>'Only Visitors', 'users'=>'Only Registered Users'),
+					'type' => 'select',
+					'default-value' => 'anybody',
+					'tags' => 'NAME="uw_filter_user"',
 					'match_by' => 'key',
 				)) + $fields;
-		// a header to attract attention to styling options
-		$fields = array('__uw_cache_header' => array(
-					'label' => '<hr><h3>Cache Options</h3>',
+		$fields = array('uw_filter_device' => array(
+					'label' => 'Show widget for:',
+					'options' => array('all'=>'All devices', 'desktop'=>'Only Desktops', 'mobile'=>'Only Mobile Phones'),
+					'type' => 'select',
+					'default-value' => 'all',
+					'tags' => 'NAME="uw_filter_device"',
+					'match_by' => 'key',
+				)) + $fields;
+			// a header to attract attention to styling options
+		$fields = array('__uw_filter_header' => array(
+					'label' => '<hr><h3>Filtering Options</h3>',
 					'type' => 'static',
 				)) + $fields;
+
+	// if widget can store cache, show cache options
+		GLOBAL $qa_modules, $uw_widgets;
+		if(@$qa_modules['widget'][$uw_widgets[$widget_key]]['object']->allow_cache){
+			$fields = array('uw_cache_exp_type' => array(
+						'label' => 'Refresh cache each:',
+						'options' => array('second'=>'Second', 'minute'=>'Minute', 'hour'=>'Hour', 'day' => 'Day',),
+						'type' => 'select',
+						'default-value' => 'minute',
+						'tags' => 'NAME="uw_cache_exp_type"',
+						'match_by' => 'key',
+					)) + $fields;
+			$fields = array('uw_cache_exp_delay' => array(
+						'label' => 'Refresh Time:',
+						'type' => 'number',
+						'default-value' => 10,
+						'tags' => 'NAME="uw_cache_exp_delay"',
+						'match_by' => 'key',
+					)) + $fields;
+			// a header to attract attention to styling options
+			$fields = array('__uw_cache_header' => array(
+						'label' => '<hr><h3>Cache Options</h3>',
+						'type' => 'static',
+					)) + $fields;
+		}
 	// if there are css files in this widget add them to options
 	$styles_path = UW_DIR.'/widgets/'.$widget_key.'/styles/';
 	if(file_exists($styles_path)){
