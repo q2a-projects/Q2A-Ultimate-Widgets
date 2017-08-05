@@ -90,11 +90,18 @@ class qa_html_theme_layer extends qa_html_theme_base {
 				$widget_key = get_class($module) . '_' .strtoupper(substr($region,0,1).substr($place,0,1)) ;
 				// check for filters
 				$userpoints = qa_db_user_points_selectspec(qa_get_logged_in_userid());
+				global $uw_widgets;
+				$widget_name = substr($widget_key,0,strlen($widget_key)-3);
 				if(
-					(get_widget_option($widget_key, 'uw_filter_device')=='all' or (qa_is_mobile_probably() and get_widget_option($widget_key, 'uw_filter_device')=='mobile') or (! qa_is_mobile_probably() and get_widget_option($widget_key, 'uw_filter_device')=='desktop'))
-					and (get_widget_option($widget_key, 'uw_filter_user')=='anybody' or (get_widget_option($widget_key, 'uw_filter_user')=='visitors' and ! qa_get_logged_in_userid()>0) or (get_widget_option($widget_key, 'uw_filter_user')=='users' and qa_get_logged_in_userid()>0) )
-					and (get_widget_option($widget_key, 'uw_filter_user_special')=='anybody' or (get_widget_option($widget_key, 'uw_filter_user_special')=='special' and qa_get_logged_in_level()>=QA_USER_LEVEL_EXPERT) or (get_widget_option($widget_key, 'uw_filter_user_special')=='users' and qa_get_logged_in_userid()>0 and qa_get_logged_in_level()<QA_USER_LEVEL_EXPERT))
-					and (get_widget_option($widget_key, 'uw_filter_user_point_enable')==false or (get_widget_option($widget_key, 'uw_filter_user_point_type')=='less' and $userpoints<get_widget_option($widget_key, 'uw_filter_user_point_type')) or (get_widget_option($widget_key, 'uw_filter_user_point_type')=='more' and $userpoints>get_widget_option($widget_key, 'uw_filter_user_point_type')))
+					// show if widget doesn't belong to this widget pack
+					!isset($uw_widgets[$widget_name])
+					or(
+						// filtering conditions
+						(get_widget_option($widget_key, 'uw_filter_device')=='all' or (qa_is_mobile_probably() and get_widget_option($widget_key, 'uw_filter_device')=='mobile') or (! qa_is_mobile_probably() and get_widget_option($widget_key, 'uw_filter_device')=='desktop'))
+						and (get_widget_option($widget_key, 'uw_filter_user')=='anybody' or (get_widget_option($widget_key, 'uw_filter_user')=='visitors' and ! qa_get_logged_in_userid()>0) or (get_widget_option($widget_key, 'uw_filter_user')=='users' and qa_get_logged_in_userid()>0) )
+						and (get_widget_option($widget_key, 'uw_filter_user_special')=='anybody' or (get_widget_option($widget_key, 'uw_filter_user_special')=='special' and qa_get_logged_in_level()>=QA_USER_LEVEL_EXPERT) or (get_widget_option($widget_key, 'uw_filter_user_special')=='users' and qa_get_logged_in_userid()>0 and qa_get_logged_in_level()<QA_USER_LEVEL_EXPERT))
+						and (get_widget_option($widget_key, 'uw_filter_user_point_enable')==false or (get_widget_option($widget_key, 'uw_filter_user_point_type')=='less' and $userpoints<get_widget_option($widget_key, 'uw_filter_user_point_type')) or (get_widget_option($widget_key, 'uw_filter_user_point_type')=='more' and $userpoints>get_widget_option($widget_key, 'uw_filter_user_point_type')))
+					)
 				){
 					$this->output('<div class="qa-widget-'.$region.' qa-widget-'.$region.'-'.$place.'">');
 					// cache th page if it's enabled
