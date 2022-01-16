@@ -56,7 +56,7 @@ class trending_topics {
 			if($i >= $count)
 				break;
 			$i++;
-			echo '<li><a class="uw-trending-topics-link" href="' . qa_path_html('tag/' . $tag) . '">' . qa_html($tag) . '</a></li>';
+			echo '<li><a class="uw-trending-topics-link" href="' . qa_path_to_root() . qa_path_html('tag/' . $tag) . '">' . qa_html($tag) . '</a></li>';
 		}		
 		echo '</ul></aside>';
 	}
